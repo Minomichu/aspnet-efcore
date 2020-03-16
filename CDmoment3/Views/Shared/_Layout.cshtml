@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewData["title"]</title>
+    <link rel="stylesheet" href="~/css/style.css" />
+
+
+    <!--<title>snabela ViewBag.Title</title> -->
+</head>
+<body>
+    <div id="container">
+        <header>
+            <nav id="desktopNav">
+                <ul>
+                    <li>
+                        <a asp-controller="CDdata" asp-action="Index">CDskivor</a>
+                    </li>
+                    <li>
+                        <a asp-controller="Artist" asp-action="Index">Artister</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+
+            <div class="wrapper">
+                @RenderBody()
+            </div>
+
+        </main>
+    </div> <!-- end container -->
+    @RenderSection("scripts", required: false)
+</body>
+</html>
